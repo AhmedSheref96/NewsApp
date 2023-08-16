@@ -6,4 +6,33 @@
     </style>
 
     <style name="Theme.NewsApp" parent="Base.Theme.NewsApp" />
+
+
+    <style name="h1">
+        <item name="fontFamily">@font/cairo</item>
+        <item name="android:fontFamily">@font/cairo</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/h1_color</item>
+        <item name="android:lineSpacingMultiplier">.8</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="h2">
+        <item name="fontFamily">@font/cairo</item>
+        <item name="android:fontFamily">@font/cairo</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:lineSpacingMultiplier">.8</item>
+        <item name="android:textColor">@color/h2_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="body">
+        <item name="fontFamily">@font/cairo</item>
+        <item name="android:fontFamily">@font/cairo</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:lineSpacingMultiplier">.8</item>
+        <item name="android:textColor">#5A5A5A</item>
+    </style>
+
+    <color name="h2_color">#525252</color>
 </resources>
