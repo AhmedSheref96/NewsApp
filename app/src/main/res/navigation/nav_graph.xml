@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
     app:startDestination="@id/newsListFragment">
 
     <fragment
         android:id="@+id/newsListFragment"
         android:name="com.el3sas.newsapp.ui.newsList.NewsListFragment"
-        android:label="NewsListFragment" />
+        android:label="NewsListFragment" >
+        <action
+            android:id="@+id/action_newsListFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="com.el3sas.newsapp.ui.newsDetails.NewsDetailsFragment"
+        android:label="fragment_news_details"
+        tools:layout="@layout/fragment_news_details">
+        <argument
+            android:name="newsData"
+            app:argType="com.el3sas.entities.ArticlesItem" />
+    </fragment>
 </navigation>
