@@ -6,19 +6,22 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import androidx.core.view.isVisible
-import dagger.hilt.android.AndroidEntryPoint
-import com.el3asas.utils.binding.FragmentBinding
-import androidx.viewbinding.ViewBinding
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
+import androidx.viewbinding.ViewBinding
+import com.el3asas.utils.binding.FragmentBinding
 import com.el3sas.entities.ArticlesItem
+import com.el3sas.newsapp.R
 import com.el3sas.newsapp.databinding.FragmentNewsDetailsBinding
 import com.el3sas.newsapp.helpers.bindImgWithGlide
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 @AndroidEntryPoint
 class NewsDetailsFragment(override val bindingInflater: (LayoutInflater) -> ViewBinding = FragmentNewsDetailsBinding::inflate) :
@@ -67,14 +70,22 @@ class NewsDetailsFragment(override val bindingInflater: (LayoutInflater) -> View
 
     private fun updateViews(articlesItem: ArticlesItem) {
         binding.apply {
+            date.text = articlesItem.publishedAt?.let {
+                convertUtcToFormattedDate(it)
+            }
             bindImgWithGlide(img, articlesItem.urlToImage)
             title.text = articlesItem.title
             description.text = articlesItem.description
-            date.text = articlesItem.publishedAt
             content.text = articlesItem.content
-            author.text = articlesItem.author
+            author.text = getString(R.string.auther) + articlesItem.author
             source.text = articlesItem.source?.name
         }
     }
 
+    private fun convertUtcToFormattedDate(utcTimestamp: String): String {
+        val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US)
+        val outputFormat = SimpleDateFormat("dd MMMM yyyy", Locale.US)
+        val date = inputFormat.parse(utcTimestamp)
+        return outputFormat.format(date)
+    }
 }
