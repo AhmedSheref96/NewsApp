@@ -68,10 +68,7 @@ class NewsListViewModel @Inject constructor(private val getNewsList: GetNewsList
 
     override fun onItemClickListener(v: View, pos: Int) {
         navigate(
-            v.findNavController(),
-            NewsListFragmentDirections.actionNewsListFragmentToNewsDetailsFragment(
-                newsListAdapter.getItemData(pos)!!
-            )
+            v.findNavController(), NewsListFragmentDirections.actionNewsListFragmentToNewsDetailsFragment(newsListAdapter.getItemData(pos)!!)
         )
     }
 
