@@ -4,5 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="mainBackGround">#FFFFFF</color>
     <color name="primaryColor">#FF5722</color>
-    <color name="news_rcv_item_porder_color">#686868</color>
+    <color name="news_rcv_item_porder_color">#C7C7C7</color>
+    <color name="border_color">#C7C7C7</color>
+    <color name="h1_color">#303030</color>
 </resources>

@@ -3,7 +3,7 @@ package com.el3sas.newsapp.ui.newsList
 sealed class NewsListIntent {
     data object GetAllList : NewsListIntent()
     data class GetFilteredList(
-        val searchWord: String? = null,
+        val searchWord: String,
         val dateFrom: String? = null,
         val dateTo: String? = null,
         val sortBy: String = "publishedAt"

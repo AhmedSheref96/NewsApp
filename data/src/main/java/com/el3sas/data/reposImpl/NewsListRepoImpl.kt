@@ -8,10 +8,22 @@ import javax.inject.Inject
 class NewsListRepoImpl @Inject constructor(private val newsListClient: NewsListClient) :
     NewsListRepo {
 
-    override suspend fun getNewsList(
-        searchWord: String?, dateFrom: String?, dateTo: String?, sortBy: String, page: Int?
+    override suspend fun getFilterableNewsList(
+        searchWord: String, dateFrom: String?, dateTo: String?, sortBy: String, page: Int?
     ): Result<NewsListResponse> = try {
-        val response = newsListClient.getNewsList(searchWord, dateFrom, dateTo, sortBy,page)
+        val response =
+            newsListClient.getFilterableNewsList(searchWord, dateFrom, dateTo, sortBy, page)
+        if (response.status == "ok") Result.success(response)
+        else Result.failure(Throwable(response.message))
+    } catch (e: Exception) {
+        Result.failure(Throwable(e.message))
+    }
+
+
+    override suspend fun getHeadlineNewsList(
+        country: String, page: Int?
+    ): Result<NewsListResponse> = try {
+        val response = newsListClient.getHeadLines(country, page)
         if (response.status == "ok") Result.success(response)
         else Result.failure(Throwable(response.message))
     } catch (e: Exception) {

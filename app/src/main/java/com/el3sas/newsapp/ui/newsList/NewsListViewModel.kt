@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
@@ -32,43 +33,58 @@ class NewsListViewModel @Inject constructor(private val getNewsList: GetNewsList
         }
 
         override fun areContentsTheSame(oldItem: ArticlesItem, newItem: ArticlesItem): Boolean {
-            return oldItem.title == newItem.title
+            return oldItem.title == newItem.title && oldItem.source?.name == newItem.source?.name && oldItem.urlToImage == newItem.urlToImage
         }
     })
 
-    init {
-        getData()
-    }
-
-    private fun getData(
-        searchWord: String? = null,
+    private fun getFilterableData(
+        searchWord: String,
         dateFrom: String? = null,
         dateTo: String? = null,
         sortBy: String = "publishedAt"
     ) {
         viewModelScope.launch {
-            getNewsList(searchWord, dateFrom, dateTo, sortBy).cachedIn(viewModelScope)
-                .collectLatest {
-                    _viewState.value = NewsListViewState.GetNewsListData(it)
-                }
+            getNewsList(
+                searchWord = searchWord, dateFrom = dateFrom, dateTo = dateTo, sortBy = sortBy
+            ).cachedIn(viewModelScope).collectLatest {
+                Timber.d("getFilterableData $it")
+                _viewState.value = NewsListViewState.GetNewsListData(it)
+            }
+        }
+    }
+
+    private fun getHeadLinesData(
+        country: String = "eg"
+    ) {
+        viewModelScope.launch {
+            getNewsList(country = country).cachedIn(viewModelScope).collectLatest {
+                Timber.d("getHeadLinesData $it")
+                _viewState.value = NewsListViewState.GetNewsListData(it)
+            }
         }
     }
 
     fun handleIntents(intent: NewsListIntent) {
+        Timber.d("intent  = $intent")
         when (intent) {
             is NewsListIntent.GetAllList, is NewsListIntent.Refresh -> {
-                getData()
+                Timber.d("NewsListIntent.GetFilteredList")
+                getHeadLinesData()
             }
 
             is NewsListIntent.GetFilteredList -> {
-                getData(intent.searchWord, intent.dateFrom, intent.dateTo, intent.sortBy)
+                Timber.d("NewsListIntent.GetFilteredList")
+                getFilterableData(intent.searchWord, intent.dateFrom, intent.dateTo, intent.sortBy)
             }
         }
     }
 
     override fun onItemClickListener(v: View, pos: Int) {
         navigate(
-            v.findNavController(), NewsListFragmentDirections.actionNewsListFragmentToNewsDetailsFragment(newsListAdapter.getItemData(pos)!!)
+            v.findNavController(),
+            NewsListFragmentDirections.actionNewsListFragmentToNewsDetailsFragment(
+                newsListAdapter.getItemData(pos)!!
+            )
         )
     }
 

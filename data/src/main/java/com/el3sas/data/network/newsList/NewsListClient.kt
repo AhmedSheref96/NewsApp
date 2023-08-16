@@ -10,18 +10,27 @@ class NewsListClient @Inject constructor(
     @IoDispatcher private val dispatcher: CoroutineDispatcher
 ) {
 
-    suspend fun getNewsList(
-        searchWord: String? = null,
+    suspend fun getFilterableNewsList(
+        searchWord: String,
         dateFrom: String? = null,
         dateTo: String? = null,
         sortBy: String = "publishedAt",
         page: Int? = null
     ) = withContext(dispatcher) {
-        service.getNewsList(
+        service.getFilterableNewsList(
             searchWord = searchWord,
             dateFrom = dateFrom,
             dateTo = dateTo,
             sortBy = sortBy,
+            page = page
+        )
+    }
+
+    suspend fun getHeadLines(
+        country: String? = "eg", page: Int? = null
+    ) = withContext(dispatcher) {
+        service.getHeadLines(
+            country = country,
             page = page
         )
     }
