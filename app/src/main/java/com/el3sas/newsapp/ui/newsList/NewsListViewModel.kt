@@ -3,9 +3,11 @@ package com.el3sas.newsapp.ui.newsList
 import android.view.View
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.findNavController
 import androidx.paging.cachedIn
 import androidx.recyclerview.widget.DiffUtil
 import com.el3asas.utils.binding.RecyclerPagedDataAdapterBinding
+import com.el3asas.utils.utils.navigate
 import com.el3sas.domain.useCases.GetNewsList
 import com.el3sas.entities.ArticlesItem
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -65,7 +67,9 @@ class NewsListViewModel @Inject constructor(private val getNewsList: GetNewsList
     }
 
     override fun onItemClickListener(v: View, pos: Int) {
-        TODO("navigate to news details")
+        navigate(
+            v.findNavController(), NewsListFragmentDirections.actionNewsListFragmentToNewsDetailsFragment(newsListAdapter.getItemData(pos)!!)
+        )
     }
 
 }
