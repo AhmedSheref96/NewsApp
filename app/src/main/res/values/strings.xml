@@ -2,4 +2,6 @@
     <string name="app_name">news_app_ole_task</string>
     <string name="loading">Loading..</string>
     <string name="view_more_details">View More Details</string>
+    <string name="auther"><i>Author </i></string>
+    <string name="source">Source\n</string>
 </resources>
