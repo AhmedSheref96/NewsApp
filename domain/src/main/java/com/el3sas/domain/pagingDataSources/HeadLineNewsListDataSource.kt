@@ -5,12 +5,9 @@ import androidx.paging.PagingState
 import com.el3sas.entities.ArticlesItem
 import com.el3sas.data.repos.NewsListRepo
 
-class NewsListDataSource constructor(
+class HeadLineNewsListDataSource constructor(
     private val repo: NewsListRepo,
-    private val searchWord: String? = null,
-    private val dateFrom: String? = null,
-    private val dateTo: String? = null,
-    private val sortBy: String = "publishedAt"
+    private val country: String,
 ) : PagingSource<Int, ArticlesItem>() {
 
     override fun getRefreshKey(state: PagingState<Int, ArticlesItem>): Int? =
@@ -21,7 +18,11 @@ class NewsListDataSource constructor(
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, ArticlesItem> =
         try {
             val key = params.key ?: 1
-            val response = repo.getNewsList(searchWord, dateFrom, dateTo, sortBy, key)
+
+            val response = repo.getHeadlineNewsList(
+                country,
+                key
+            )
             response.fold(onSuccess = {
                 LoadResult.Page(
                     it.articles?.filterNotNull() ?: emptyList(),
