@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="loading">جارى التحميل ..</string>
+    <string name="view_more_details">الاطلاع على التفاصيل</string>
+    <string name="auther"><i>الكاتب </i></string>
+    <string name="source">الناشر\n</string>
+</resources>
