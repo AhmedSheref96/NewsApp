@@ -26,7 +26,7 @@ Using
 
 1. News List Screen.
 
-#### considerations
+###### considerations
  - Search in News.
  - sorting by date.
 
@@ -36,7 +36,7 @@ Using
 
 
 2. News Details Screen.
-#### considrations
+###### considrations
  - Open in browser.
 ![Second Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_dark.jpg)
 
