@@ -26,18 +26,18 @@ Using
  - Search in News.
  - sorting by date.
 
-![First Screen Dark]("https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_dark.jpg")
+![First Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_dark.jpg)
 
-![First Screen Light]("https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_light.jpg")
+![First Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_light.jpg)
 
-![Second Screen Dark]("https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_dark.jpg")
+![Second Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_dark.jpg)
 
-![First Screen Light]("https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_light.jpg")
+![First Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_light.jpg)
  
-3. News Details Screen.
-##### considrations
+2. News Details Screen.
+#### considrations
  - Open in browser.
 
-![Third Screen Dark]("https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg")
+![Third Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg)
 
-![Third Screen Light]("https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_light.jpg")
+![Third Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_light.jpg)
