@@ -30,14 +30,16 @@ Using
 
 ![First Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_light.jpg)
 
-![Second Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_dark.jpg)
 
-![First Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_light.jpg)
- 
 2. News Details Screen.
 #### considrations
  - Open in browser.
+![Second Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_dark.jpg)
+
+![Second Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_light.jpg)
+ 
 
 ![Third Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg)
 
 ![Third Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_light.jpg)
+
