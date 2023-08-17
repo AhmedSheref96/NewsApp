@@ -2,8 +2,8 @@ package com.el3sas.domain.pagingDataSources
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.el3sas.entities.ArticlesItem
 import com.el3sas.data.repos.NewsListRepo
+import com.el3sas.entities.ArticlesItem
 
 class FilterableNewsListDataSource constructor(
     private val repo: NewsListRepo,
@@ -18,28 +18,28 @@ class FilterableNewsListDataSource constructor(
             state.closestPageToPosition(anchorPosition)?.nextKey
         }
 
-    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, ArticlesItem> =
-        try {
-            val key = params.key ?: 1
+    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, ArticlesItem> = try {
+        val key = params.key ?: 1
 
-            val response = repo.getFilterableNewsList(
-                searchWord,
-                dateFrom,
-                dateTo,
-                sortBy,
-                key
+        val response = repo.getFilterableNewsList(
+            searchWord, dateFrom, dateTo, sortBy, key
+        )
+
+        response.fold(onSuccess = {
+            LoadResult.Page(
+                it.articles?.filterNotNull() ?: emptyList(),
+                nextKey = if (it.articles.isNullOrEmpty().not()) key + 1 else null,
+                prevKey = if (key != 0) key - 1 else null
             )
-            response.fold(onSuccess = {
+        }, onFailure = {
+            if (it.message?.contains("Maximum Results Reached") == true) {
                 LoadResult.Page(
-                    it.articles?.filterNotNull() ?: emptyList(),
-                    nextKey = if (it.articles.isNullOrEmpty().not()) key + 1 else null,
-                    prevKey = if (key != 0) key - 1 else null
+                    data = emptyList(), nextKey = null, prevKey = if (key != 0) key - 1 else null
                 )
-            }, onFailure = {
-                LoadResult.Error(Throwable())
-            })
+            } else LoadResult.Error(it)
+        })
 
-        } catch (e: Exception) {
-            LoadResult.Error(Throwable(e.message ?: ""))
-        }
+    } catch (e: Exception) {
+        LoadResult.Error(Throwable(e.message ?: ""))
+    }
 }

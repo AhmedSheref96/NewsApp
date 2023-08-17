@@ -10,6 +10,7 @@ import com.el3asas.utils.binding.RecyclerPagedDataAdapterBinding
 import com.el3asas.utils.utils.navigate
 import com.el3sas.domain.useCases.GetNewsList
 import com.el3sas.entities.ArticlesItem
+import com.el3sas.newsapp.helpers.NewsListLoadStateAdapter
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -35,7 +36,9 @@ class NewsListViewModel @Inject constructor(private val getNewsList: GetNewsList
         override fun areContentsTheSame(oldItem: ArticlesItem, newItem: ArticlesItem): Boolean {
             return oldItem.title == newItem.title && oldItem.source?.name == newItem.source?.name && oldItem.urlToImage == newItem.urlToImage
         }
-    })
+    }).apply {
+        withLoadStateFooter(footer = NewsListLoadStateAdapter(this))
+    }
 
     private fun getFilterableData(
         searchWord: String,
