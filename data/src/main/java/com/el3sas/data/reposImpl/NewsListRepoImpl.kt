@@ -14,18 +14,29 @@ class NewsListRepoImpl @Inject constructor(private val newsListClient: NewsListC
         val response =
             newsListClient.getFilterableNewsList(searchWord, dateFrom, dateTo, sortBy, page)
         if (response.status == "ok") Result.success(response)
-        else Result.failure(Throwable(response.message))
+        else if (response.code?.contains("maximumResultsReached") == true) {
+            Result.failure(
+                Throwable(
+                    "Maximum Results Reached"
+                )
+            )
+        } else Result.failure(Throwable(response.message))
     } catch (e: Exception) {
         Result.failure(Throwable(e.message))
     }
-
 
     override suspend fun getHeadlineNewsList(
         country: String, page: Int?
     ): Result<NewsListResponse> = try {
         val response = newsListClient.getHeadLines(country, page)
         if (response.status == "ok") Result.success(response)
-        else Result.failure(Throwable(response.message))
+        else if (response.code?.contains("maximumResultsReached") == true) {
+            Result.failure(
+                Throwable(
+                    "Maximum Results Reached"
+                )
+            )
+        } else Result.failure(Throwable(response.message))
     } catch (e: Exception) {
         Result.failure(Throwable(e.message))
     }
