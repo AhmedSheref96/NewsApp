@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mainBackGround"
     android:fitsSystemWindows="true"
     tools:context=".ui.newsDetails.NewsDetailsFragment">
 
@@ -67,7 +66,6 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
 
-
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/date"
                     style="@style/body"
@@ -100,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_16sdp"
                 android:layout_marginTop="@dimen/_24sdp"
-                android:textColor="@color/black"
+                android:textColor="@color/onBackground"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -110,6 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_16sdp"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/onSurfaceVariant"
                 app:layout_constraintTop_toBottomOf="@id/title" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -119,8 +118,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_16sdp"
                 android:layout_marginTop="@dimen/_16sdp"
+                android:textColor="@color/onSurfaceVariant"
                 app:layout_constraintTop_toBottomOf="@id/description" />
-
 
             <androidx.constraintlayout.widget.Group
                 android:id="@+id/dataGroup"
@@ -142,14 +141,15 @@
                 <ProgressBar
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_12sdp" />
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:indeterminateTint="@color/primary" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:text="@string/loading"
-                    android:textColor="@color/primaryColor" />
+                    android:textColor="@color/primary" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
