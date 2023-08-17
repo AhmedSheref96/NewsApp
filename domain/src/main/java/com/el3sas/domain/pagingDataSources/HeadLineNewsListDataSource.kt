@@ -2,8 +2,8 @@ package com.el3sas.domain.pagingDataSources
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.el3sas.entities.ArticlesItem
 import com.el3sas.data.repos.NewsListRepo
+import com.el3sas.entities.ArticlesItem
 
 class HeadLineNewsListDataSource constructor(
     private val repo: NewsListRepo,
@@ -30,7 +30,13 @@ class HeadLineNewsListDataSource constructor(
                     prevKey = if (key != 0) key - 1 else null
                 )
             }, onFailure = {
-                LoadResult.Error(Throwable())
+                if (it.message?.contains("Maximum Results Reached") == true) {
+                    LoadResult.Page(
+                        data = emptyList(),
+                        nextKey = null,
+                        prevKey = if (key != 0) key - 1 else null
+                    )
+                } else LoadResult.Error(it)
             })
 
         } catch (e: Exception) {
