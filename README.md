@@ -16,6 +16,10 @@ Using
 4. Use Cases.
 5. Navigation Component.
 6. And third-party libraries.
+7. Retrofit.
+8. Okhttp3.
+9. Glide.
+....
 
 
 ### features
@@ -42,4 +46,8 @@ Using
 ![Third Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg)
 
 ![Third Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_light.jpg)
+
+3. caching data. 
+![Second Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen_recording2.jpg)
+
 
