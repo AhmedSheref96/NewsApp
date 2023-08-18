@@ -64,11 +64,7 @@ I'm using  [postman collection](https://elements.getpostman.com/redirect?entityI
 
 ##### caching data. 
 
-[![Caching Experment Video](<img src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg width=50%>)](
-
-<video width="50%" controls>
-  <source src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen_recording2.mp4" type="video/mp4">
-</video>)
+[![Caching Experment Video](<img src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg width=50%>)](https://github.com/AhmedSheref96/NewsApp/blob/master/screen_recording2.mp4)
 
 
 **Coming Features**
@@ -82,5 +78,5 @@ I'm using  [postman collection](https://elements.getpostman.com/redirect?entityI
 
 
 
-<a href="play.google.com/store/apps/details?id=com.el3sas.newsapp" target="blank"><img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/store_img.png" alt="Get It On Store" /></a>
+<a href="play.google.com/store/apps/details?id=com.el3sas.newsapp" target="blank"><img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/store_img.png" alt="Get It On Store" height="30"/></a>
 
