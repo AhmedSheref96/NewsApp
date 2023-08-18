@@ -73,7 +73,8 @@ I'm using  [postman collection](https://elements.getpostman.com/redirect?entityI
 - [ ] Handle empty status with [lottie](https://lottiefiles.com/) json files.
 - [ ] Open in web view instead of open in browser.
 - [ ] Using splash screen api.
-
+- [ ] User registeration.
+- [ ] User saved news with locale database.
 
 
 <a href="https://play.google.com/store/apps/details?id=com.el3sas.newsapp" target="blank"><img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/store_img.png" alt="Get It On Store" height="60"/></a>
