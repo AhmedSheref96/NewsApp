@@ -64,7 +64,7 @@ I'm using  [postman collection](https://elements.getpostman.com/redirect?entityI
 
 ##### caching data. 
 
-[![Caching Experment Video](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg)](https://github.com/AhmedSheref96/NewsApp/blob/master/screen_recording2.mp4)
+[Caching Experment Video](https://github.com/AhmedSheref96/NewsApp/blob/master/screen_recording2.mp4)
 
 **Coming Features**
 
