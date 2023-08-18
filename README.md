@@ -1,53 +1,86 @@
-# NewsApp
-News Appliaction For OLE
-
+# News App
+News Application For OLE
 
 News App using https://newsapi.org/ Api.
-I'm using  [postman collection](https://elements.getpostman.com/redirect?entityId=19417510-d67c72fb-5224-47bc-9aea-ca775aee486a&entityType=collection) to preview that easly.
+I'm using  [postman collection](https://elements.getpostman.com/redirect?entityId=19417510-d67c72fb-5224-47bc-9aea-ca775aee486a&entityType=collection) to preview that easily.
 
 
-#### Implementation :
 
-Using 
+
+
+
+
+#### Using 
 
 1. Kotlin.
+
 2. Modularization.
+
 3. MVI.
+
 4. Use Cases.
+
 5. Navigation Component.
+
 6. And third-party libraries.
+
 7. Retrofit.
+
 8. Okhttp3.
+
 9. Glide.
-....
+    ....
+
+  
 
 
 ### features
 
-1. News List Screen.
+**Embedded Features :**
 
-###### considerations
  - Search in News.
  - sorting by date.
-
-![First Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_dark.jpg)
-
-![First Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_light.jpg)
-
-
-2. News Details Screen.
-###### considrations
  - Open in browser.
-![Second Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_dark.jpg)
 
-![Second Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_light.jpg)
- 
 
-![Third Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg)
 
-![Third Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_light.jpg)
+##### News List Screen
 
-3. caching data. 
-[![Caching Experment Video](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg)](https://github.com/AhmedSheref96/NewsApp/blob/master/screen_recording2.mp4)
+| Dark Mode                                                    | Light Mode                                                   |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![First Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_dark.jpg) | ![First Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_light.jpg) |
 
+
+
+##### News Details Screen
+
+
+| Dark Mode                                                    | Light Mode                                                   |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+|![Second Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_dark.jpg) | ![Second Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_light.jpg) |
+| ![Third Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg) | ![Third Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_light.jpg) |
+
+
+
+##### caching data. 
+
+[![Caching Experment Video](<img src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg width=50%>)](
+
+<video width="50%" controls>
+  <source src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen_recording2.mp4" type="video/mp4">
+</video>)
+
+
+**Coming Features**
+
+- [ ] Sort news list according to user selection from date dialog picker.
+- [ ] Get headlines news list according to user country selection.
+- [ ] Handle empty status with [lottie](https://lottiefiles.com/) json files.
+- [ ] Open in web view instead of open in browser.
+- [ ] Using splash screen api.
+
+
+
+
+<a href="play.google.com/store/apps/details?id=com.el3sas.newsapp" target="blank"><img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/store_img.png" alt="Get It On Store" /></a>
 
