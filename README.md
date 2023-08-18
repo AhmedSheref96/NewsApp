@@ -15,15 +15,15 @@ I'm using  [postman collection](https://elements.getpostman.com/redirect?entityI
 
 | Dark Mode                                                    | Light Mode                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![First Screen Dark](<img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_dark.jpg" width="50%">) | ![First Screen Light](<img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_light.jpg" width="50%">) |
+| <img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_dark.jpg" width="50%"> | <img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_light.jpg" width="50%"> |
 
 
 ### News Details Screen
 
 | Dark Mode                                                    | Light Mode                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Second Screen Dark](<img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_dark.jpg" width="50%">) | ![Second Screen Light](<img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_light.jpg" width=50%") |
-| ![Third Screen Dark](<img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg" width="50%">) | ![Third Screen Light](<img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_light.jpg" width="50%">) |
+| <img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_dark.jpg" width="50%"> | <img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_light.jpg" width=50%" |
+| <img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg" width="50%"> | <img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_light.jpg" width="50%"> |
 
 
 ### caching data. 
