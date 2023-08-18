@@ -4,56 +4,21 @@ News Application For OLE
 News App using https://newsapi.org/ Api.
 I'm using  [postman collection](https://elements.getpostman.com/redirect?entityId=19417510-d67c72fb-5224-47bc-9aea-ca775aee486a&entityType=collection) to preview that easily.
 
-
-
-
-
-
-
-#### Using 
-
-1. Kotlin.
-
-2. Modularization.
-
-3. MVI.
-
-4. Use Cases.
-
-5. Navigation Component.
-
-6. And third-party libraries.
-
-7. Retrofit.
-
-8. Okhttp3.
-
-9. Glide.
-    ....
-
-  
-
-
-### features
-
+## features
 **Embedded Features :**
-
  - Search in News.
  - sorting by date.
  - Open in browser.
 
 
-
-##### News List Screen
+### News List Screen
 
 | Dark Mode                                                    | Light Mode                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![First Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_dark.jpg) | ![First Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_light.jpg) |
 
 
-
-##### News Details Screen
-
+### News Details Screen
 
 | Dark Mode                                                    | Light Mode                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -61,9 +26,7 @@ I'm using  [postman collection](https://elements.getpostman.com/redirect?entityI
 | ![Third Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg) | ![Third Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_light.jpg) |
 
 
-
-##### caching data. 
-
+### caching data. 
 [Caching Experment Video](https://github.com/AhmedSheref96/NewsApp/blob/master/screen_recording2.mp4)
 
 **Coming Features**
@@ -75,6 +38,30 @@ I'm using  [postman collection](https://elements.getpostman.com/redirect?entityI
 - [ ] Using splash screen api.
 - [ ] User registeration.
 - [ ] User saved news with locale database.
+
+
+
+## implementation
+with modularization, I have build four  modules
+1- Entities : that represents responses models.
+2- Data : implement data collecting instructions.
+3- Domain : implement usecases with repositories implementations and paging data sources.
+4- UI : implement and display features ui with intents and view states.
+
+
+## Build With
+- Kotlin.
+- Modularization.
+- Clean Architecture.
+- MVI.
+- Use Cases.
+- Navigation Component.
+- And third-party libraries.
+- Retrofit.
+- Okhttp3.
+- Glide.
+  ....
+
 
 
 <a href="https://play.google.com/store/apps/details?id=com.el3sas.newsapp" target="blank"><img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/store_img.png" alt="Get It On Store" height="60"/></a>
