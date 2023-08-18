@@ -22,7 +22,7 @@ I'm using  [postman collection](https://elements.getpostman.com/redirect?entityI
 
 | Dark Mode                                                    | Light Mode                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| <img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_dark.jpg" width="50%"> | <img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_light.jpg" width=50%" |
+| <img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_dark.jpg" width="50%"> | <img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_light.jpg" width=50%"> |
 | <img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg" width="50%"> | <img align="center" src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_light.jpg" width="50%"> |
 
 
