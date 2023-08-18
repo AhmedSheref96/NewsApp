@@ -15,15 +15,15 @@ I'm using  [postman collection](https://elements.getpostman.com/redirect?entityI
 
 | Dark Mode                                                    | Light Mode                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![First Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_dark.jpg) | ![First Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_light.jpg) |
+| ![First Screen Dark](<img src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_dark.jpg" width=50%") | ![First Screen Light](<img src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen1_light.jpg" width=50%") |
 
 
 ### News Details Screen
 
 | Dark Mode                                                    | Light Mode                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|![Second Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_dark.jpg) | ![Second Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_light.jpg) |
-| ![Third Screen Dark](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg) | ![Third Screen Light](https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_light.jpg) |
+| ![Second Screen Dark](<img src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_dark.jpg" width=50%") | ![Second Screen Light](<img src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen2_light.jpg" width=50%") |
+| ![Third Screen Dark](<img src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_dark.jpg" width=50%") | ![Third Screen Light](<img src="https://github.com/AhmedSheref96/NewsApp/blob/master/screen3_light.jpg" width=50%") |
 
 
 ### caching data. 
