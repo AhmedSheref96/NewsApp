@@ -1,5 +1,5 @@
 # News App
-News Application For OLE
+News Application represents news list and details.
 
 News App using https://newsapi.org/ Api.
 I'm using  [postman collection](https://elements.getpostman.com/redirect?entityId=19417510-d67c72fb-5224-47bc-9aea-ca775aee486a&entityType=collection) to preview that easily.
